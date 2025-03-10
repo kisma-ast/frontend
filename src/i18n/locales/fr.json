@@ -1,0 +1,15 @@
+{
+    "common": {
+      "title": "Informations de transfert",
+      "selectCaption": "Sélectionner une légende",
+      "supportFees": "Supporter les frais de transaction"
+    },
+    "form": {
+      "placeholderAmount": "Entrez le montant",
+      "placeholderPhone": "Entrez le numéro de téléphone",
+      "totalWithFees": "Total avec les frais",
+      "amountEmpty": "Le montant est requis",
+      "phoneEmpty": "Le numéro de téléphone est requis"
+    }
+  }
+  

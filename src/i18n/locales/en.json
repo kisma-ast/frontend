@@ -1,0 +1,15 @@
+{
+    "common": {
+      "title": "Transfer Information",
+      "selectCaption": "Select a caption",
+      "supportFees": "Support transaction fees"
+    },
+    "form": {
+      "placeholderAmount": "Enter amount",
+      "placeholderPhone": "Enter phone number",
+      "totalWithFees": "Total with fees",
+      "amountEmpty": "Amount is required",
+      "phoneEmpty": "Phone number is required"
+    }
+  }
+  

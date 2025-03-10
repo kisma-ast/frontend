@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light theme variables */
+    --background: 280 40% 95%;
+    --foreground: 280 10% 10%;
+
+    --gradient-start: 280 40% 65%;
+    --gradient-end: 320 40% 60%;
+
+    --card: 280 40% 90%;
+    --card-foreground: 280 10% 10%;
+
+    --popover: 280 40% 90%;
+    --popover-foreground: 280 10% 10%;
+
+    --primary: 280 40% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 20% 80%;
+    --secondary-foreground: 280 10% 10%;
+
+    --muted: 280 20% 85%;
+    --muted-foreground: 280 10% 30%;
+
+    --accent: 280 30% 75%;
+    --accent-foreground: 280 10% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 280 20% 80%;
+    --input: 280 20% 80%;
+    --ring: 280 40% 50%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark theme variables */
+    --background: 280 40% 10%;
+    --foreground: 0 0% 100%;
+
+    --gradient-start: 280 40% 35%;
+    --gradient-end: 320 40% 30%;
+
+    --card: 280 40% 15%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 280 40% 15%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 280 40% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 20% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 280 20% 20%;
+    --muted-foreground: 280 10% 70%;
+
+    --accent: 280 30% 25%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 280 20% 30%;
+    --input: 280 20% 30%;
+    --ring: 280 40% 50%;
+  }
+}
+
+/* Base styles */
+body {
+  background: linear-gradient(
+    to bottom right,
+    hsl(var(--gradient-start)),
+    hsl(var(--gradient-end))
+  );
+  color: hsl(var(--foreground));
+  min-height: 100vh;
+}
+
+/* Optional: Add smooth transitions when theme changes */
+* {
+  @apply transition-colors duration-200;
+}
