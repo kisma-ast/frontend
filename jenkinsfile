@@ -2,37 +2,32 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout Code') {
+        stage('Checkout Backend') {
             steps {
-                git branch: 'main', url: 'https://github.com/kisma-ast/frontend.git'
+                git branch: 'main', url: 'https://github.com/kisma-ast/backend'
             }
         }
 
-        stage('Install Dependencies') {
+        stage('Checkout Frontend') {
             steps {
-                sh 'npm install'
+                git branch: 'main', url: 'https://github.com/kisma-ast/frontend'
+            }
+        }
+
+        stage('Build Backend') {
+            steps {
+                dir('backend') {
+                    sh './build-backend.sh'
+                }
             }
         }
 
         stage('Build Frontend') {
             steps {
-                sh 'npm run build'
+                dir('frontend') {
+                    sh './build-frontend.sh'
+                }
             }
         }
-
-        /*
-        stage('Run Tests') {
-            steps {
-                sh 'npm test'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo "Déploiement du frontend en cours..."
-                // Ajoute ici ton script de déploiement (Docker, SSH, etc.)
-            }
-        }
-        */
     }
 }
